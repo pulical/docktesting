@@ -45,6 +45,8 @@ def test_playwright():
         page.locator('xpath=//*[@id="lb-dbSobrenegocio"]').fill('Hi, there! This is just a testing message')
         page.locator('xpath=//*[@id="11119step-2"]/div[6]/input').click()
         
+        print("successfully printed")
+        
         browser.close()
         
-        print("successfully printed")
+        
