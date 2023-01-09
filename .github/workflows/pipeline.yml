@@ -12,15 +12,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10.9'
+          python-version: '3.11'
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest-playwright
-          pip install pytest-xvfb
-          npx playwright install-deps
+          pip install -e
       - name: Ensure browsers are installed
         run: python -m playwright install --with-deps
-      - name: Run the e2e test suite
-        run: npx playwright test
+      - name: Run the test
+        run: pytest
