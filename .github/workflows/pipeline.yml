@@ -21,4 +21,6 @@ jobs:
       - name: Ensure browsers are installed
         run: python -m playwright install --with-deps
       - name: Run the test
-        run: pytest
+        run: |
+           ls
+           pytest docktest.py
