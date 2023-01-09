@@ -22,6 +22,4 @@ jobs:
       - name: Ensure browsers are installed
         run: python -m playwright install --with-deps
       - name: Run the test
-        run: |
-           ls
-           xvfb-run python docktest.py
+        run: xvfb-run python docktest.py
