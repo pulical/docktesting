@@ -44,5 +44,7 @@ def test_playwright():
         page.locator('xpath=//*[@id="lb-dbEstimativa2"]').nth(0).select_option('Estimativa de 1.000 até 5.000 cartões')
         page.locator('xpath=//*[@id="lb-dbSobrenegocio"]').fill('Hi, there! This is just a testing message')
         page.locator('xpath=//*[@id="11119step-2"]/div[6]/input').click()
-
+        
         browser.close()
+        
+        print("successfully printed")
